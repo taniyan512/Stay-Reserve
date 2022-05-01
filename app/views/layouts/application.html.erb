@@ -11,6 +11,43 @@
   </head>
 
   <body>
-    <%= yield %>
+  <header class="header">
+   <div class="header-inner">
+    <div class="header-left-nav">
+     <a href="/">
+      <img src="/assets/logo.png">
+    </div>
+   </div>
+   
+   <% if user_signed_in? %>
+     <!-- ユーザーがログイン状態の時の処理 -->
+     <div class = login-header-right-nav>
+     <p>current_user.name</p>
+     <div class="login-nav-item">
+     <img class="login-icon" alt="メニュー" src="/assets/default_icon-9263fc59c414b7228d256fc178dcb22183561357950a68f5ad086ba7ee054974.jpeg">
+     <nav>
+      <ul class="login-menu">
+      <li><%= link_to "ルーム登録", new_room_path %></li>
+      <li></li>
+      <li><%= link_to "登録済みルーム一覧", rooms_path %> </li>
+      <li></li>
+      <li><%= link_to "ログアウト",destroy_user_session_path,method: :delete %></li>
+      </ul>
+     </nav>
+     </div>
+     </div>
+     <% else %> <!-- ユーザーがログインしていない時 -->
+    <div class="header-right-nav">
+     <div class="nav-item">
+      <a class="btn first-btn"  href="/users/sign_in">ログイン</a>
+      <a class="btn second-btn" href="/users/sign_up">登録する</a>
+     </div>
+    </div> 
+   <% end %>
+  </header>
+   <p class="notice"><%= notice %></p>
+   <p class="alert"><%= alert %></p>
+
+   <%= yield %>
   </body>
 </html>
