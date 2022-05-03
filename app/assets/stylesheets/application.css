@@ -59,3 +59,20 @@
     background-color: #6c757d;
     border-color: #6c757d;
 }
+
+.login-header-right-nav {
+    float:right;
+}
+
+.login-icon {
+    float:right;
+    width:20%;
+    height:20%;
+    border-radius:50%;
+    position:relative;
+    bottom:55px;
+}
+
+.dropdown {
+    display:none;
+}

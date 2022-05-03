@@ -7,7 +7,7 @@ class RoomsController < ApplicationController
   end
 
   def create
-    @room = Room,new(params,require(:room).permit(:room_name, :room_introduce, :price, :adress, :image))
+    @room = Room.new(params.require(:room).permit(:room_name, :room_introduce, :price, :adress, :image))
     if @room.save
       flash[:notice] = "Room was successfully created."
       redirect_to room_path

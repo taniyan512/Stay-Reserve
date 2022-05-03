@@ -22,11 +22,11 @@
    <% if user_signed_in? %>
      <!-- ユーザーがログイン状態の時の処理 -->
      <div class = login-header-right-nav>
-     <p>current_user.name</p>
+      <p><%= current_user.username %></p>
      <div class="login-nav-item">
-     <img class="login-icon" alt="メニュー" src="/assets/default_icon-9263fc59c414b7228d256fc178dcb22183561357950a68f5ad086ba7ee054974.jpeg">
      <nav>
-      <ul class="login-menu">
+      <img class="login-icon" alt="メニュー" src="/assets/default_icon-9263fc59c414b7228d256fc178dcb22183561357950a68f5ad086ba7ee054974.jpeg">
+      <ul class="dropdown">
       <li><%= link_to "ルーム登録", new_room_path %></li>
       <li></li>
       <li><%= link_to "登録済みルーム一覧", rooms_path %> </li>
