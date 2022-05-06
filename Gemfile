@@ -60,3 +60,9 @@ gem 'devise'
 #ログイン機能を日本語にする
 gem 'devise-i18n'
 gem 'devise-i18n-views'
+
+#ファイルのアップロード機能を簡単に追加することが出来るgem
+gem 'carrierwave', '~> 2.0'
+
+#バグを調べる
+gem 'pry-rails'

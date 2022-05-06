@@ -1,5 +1,7 @@
 class RoomsController < ApplicationController
   def index
+    @user = User.find(current_user.id)
+    @rooms = @user.rooms
   end
 
   def new
@@ -7,10 +9,11 @@ class RoomsController < ApplicationController
   end
 
   def create
-    @room = Room.new(params.require(:room).permit(:room_name, :room_introduce, :price, :adress, :image))
+    @room = Room.new(params.require(:room).permit(:room_name, :room_introduce, :price, :adress, :room_image))
+    @room.user_id = current_user.id
     if @room.save
       flash[:notice] = "Room was successfully created."
-      redirect_to room_path
+      redirect_to room_path(@room)
     else
       render "new" 
     end

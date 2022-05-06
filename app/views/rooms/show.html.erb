@@ -1,3 +1,7 @@
 <% if flash[:notcie] %>
 <p class="notice"><%= flash[:notice] %></p>
 <% end %>
+
+<div class="room-show-container">
+    <%= image_tag @room.room_image.url %>
+</div>

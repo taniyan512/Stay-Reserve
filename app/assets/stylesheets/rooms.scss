@@ -1,3 +1,28 @@
 // Place all the styles related to the rooms controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
+.room-post-content {
+    width: 100%;
+}
+
+table {
+    border-collapse: collapase;
+    width: 100%;
+}
+
+h3 {
+    font-size: 40px;;
+}
+
+.room-infomation {
+    width: 100%
+}
+
+.room-user-infomation {
+    width: 100%;
+}
+
+.image {
+    width: 240px;
+    height: 140px;
+}
