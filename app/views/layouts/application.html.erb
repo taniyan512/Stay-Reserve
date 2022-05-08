@@ -29,7 +29,7 @@
               <img class="login-icon" alt="メニュー" src="/assets/default_icon-9263fc59c414b7228d256fc178dcb22183561357950a68f5ad086ba7ee054974.jpeg">
                 <ul class="dropdown">
                   <li><%= link_to "ルーム登録", new_room_path %></li>
-                  <li></li>
+                  <li><%= link_to "予約一覧", reservations_path %> </li>
                   <li><%= link_to "登録済みルーム一覧", rooms_path %> </li>
                   <li></li>
                   <li><%= link_to "ログアウト",destroy_user_session_path,method: :delete %></li>
