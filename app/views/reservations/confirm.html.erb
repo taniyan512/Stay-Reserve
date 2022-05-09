@@ -5,19 +5,24 @@
         <table>
             <tr>
                 <th><%= f.label :startDay, "開始日" %></th>
-                <td><%= f.date_field :startDay %></td>
+                <td><%= f.date_field :startDay, readonly: true %></td>
             </tr>
             <tr>
                 <th><%= f.label :endDay, "終了日" %></th>
-                <td><%= f.date_field :endDay %></td>
+                <td><%= f.date_field :endDay, readonly: true %></td>
             </tr>
             <tr>
                 <th><%= f.label :numberOfPeople, "人数" %></th>
                 <td><%= f.number_field :numberOfPeople %></td>
             </tr>
-            
-                
-            
+            <tr>
+                <th><%= f.label  "使用日数" %></th>
+                <td><%= "#{@days}日" %></td>
+            </tr>
+            <tr>
+                <th><%= f.label :totalPrice, "合計金額" %></th>
+                <td><%= f.number_field :totalPrice, readonly: true %></td>
+            </tr>                
         </table>
  
         <ul>
