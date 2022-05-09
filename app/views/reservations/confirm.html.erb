@@ -1,11 +1,7 @@
-<% if flash[:notcie] %>
-<p class="notice"><%= flash[:notice] %></p>
-<% end %>
-
-<div class="room-show-content">
-    <%= image_tag @room.room_image.url, class: "show-image" %>
-    <div class="resservations-form">
-        <%= form_with url: confirm_reservation_path do |f| %>
+<div class="reservation-new-content">
+    <h1>予約内容確認</h1>
+    <div class="resservations-confirmation">
+        <%= form_with model: @reservation do |f| %>
         <table>
             <tr>
                 <th><%= f.label :startDay, "開始日" %></th>
@@ -19,11 +15,14 @@
                 <th><%= f.label :numberOfPeople, "人数" %></th>
                 <td><%= f.number_field :numberOfPeople %></td>
             </tr>
-            <%= f.hidden_field :room_id, value: @room.id %>
+            
+                
+            
         </table>
  
         <ul>
-            <li><%= f.submit "予約する", {class: "yoyaku"} %></li>
+            <li><%= f.submit "予約を確定", {class: "kakutei"} %></li>
+            <li><%= link_to "詳細へ戻る", room_path %></li>
         </ul>
         <% end %>    
     </div>
