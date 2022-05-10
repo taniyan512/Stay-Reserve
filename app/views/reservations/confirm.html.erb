@@ -22,7 +22,8 @@
             <tr>
                 <th><%= f.label :totalPrice, "合計金額" %></th>
                 <td><%= f.number_field :totalPrice, readonly: true %></td>
-            </tr>                
+            </tr>
+            <%= f.hidden_field :room_id, value: @room.id %>                
         </table>
  
         <ul>
