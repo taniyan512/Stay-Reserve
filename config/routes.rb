@@ -4,9 +4,11 @@ Rails.application.routes.draw do
   get 'rooms/index'
   get '/' => "home#top"
   post 'reservations/:id' => 'reservations#confirm', as: :confirm_reservation
-  devise_for :users
+  get 'home/account' => 'home#account', as: :account_home
+  get 'home/profile' => 'home#profile', as: :profile_home
+  post 'home/profile' => 'home#update', as: :update_home
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
   resources :rooms
   resources :reservations
-  
+  devise_for :users
 end

@@ -23,7 +23,8 @@
                 <th><%= f.label :totalPrice, "合計金額" %></th>
                 <td><%= f.number_field :totalPrice, readonly: true %></td>
             </tr>
-            <%= f.hidden_field :room_id, value: @room.id %>                
+            <%= f.hidden_field :room_id, value: @room.id %>
+            <%= f.hidden_field :user_id, value: @user %>                 
         </table>
  
         <ul>

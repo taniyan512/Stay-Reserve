@@ -19,19 +19,19 @@
           </a>
         </div>
       </div>
-    
        <% if user_signed_in? %>
         <!-- ユーザーがログイン状態の時の処理 -->
         <div class = login-header-right-nav>
           <p><%= current_user.username %></p>
           <div class="login-nav-item">
             <nav>
-              <img class="login-icon" alt="メニュー" src="/assets/default_icon-9263fc59c414b7228d256fc178dcb22183561357950a68f5ad086ba7ee054974.jpeg">
+              <%= image_tag current_user.user_image.url, class: 'login-icon' %>
                 <ul class="dropdown">
+                  <li><%= link_to "プロフィール", profile_home_path %></li>
                   <li><%= link_to "ルーム登録", new_room_path %></li>
                   <li><%= link_to "予約一覧", reservations_path %> </li>
                   <li><%= link_to "登録済みルーム一覧", rooms_path %> </li>
-                  <li></li>
+                  <li><%= link_to "アカウント設定", account_home_path  %></li>
                   <li><%= link_to "ログアウト",destroy_user_session_path,method: :delete %></li>
                 </ul>
             </nav>
