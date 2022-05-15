@@ -30,4 +30,6 @@ class ReservationsController < ApplicationController
     @user = current_user.id
     @reservation = Reservation.find(params[:id])
   end
+
+  
 end
