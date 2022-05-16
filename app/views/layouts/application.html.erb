@@ -26,10 +26,10 @@
           <div class="login-nav-item">
             <nav>
               <%  if current_user.user_image.nil? %>
-                <%= image_tag current_user.user_image.url, class: 'login-icon' %>
-              <% else %>
                 <img class="login-icon" src="/assets/default_icon-9263fc59c414b7228d256fc178dcb22183561357950a68f5ad086ba7ee054974.jpeg">
-              <% end %> 
+              <% else %>
+                <%= image_tag current_user.user_image.url, class: 'login-icon' %>
+              <% end %>             
                 <ul class="dropdown">
                   <li><%= link_to "プロフィール", profile_home_path %></li>
                   <li><%= link_to "ルーム登録", new_room_path %></li>
