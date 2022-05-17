@@ -66,3 +66,6 @@ gem 'carrierwave', '~> 2.0'
 
 #バグを調べる
 gem 'pry-rails'
+
+#検索フォームを追加する
+gem 'ransack'
