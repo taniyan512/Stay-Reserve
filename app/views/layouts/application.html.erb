@@ -12,23 +12,27 @@
 
   <body>
     <header class="header">
-      <div class="header-inner">
+  
         <div class="header-left-nav">
-          <a href="/">
-            <img src="/assets/logo.png">
+          <a href="/" class="header-logo">
+            Taniyan Share
           </a>
         </div>
         <div class="serch_form">
           <%= search_form_for @q, url: area_serch_room_path do |f| %>
-          <%= f.search_field :serch_cont, placeholder: "エリア"  %>
-          <%= f.submit %>
+          <%= f.search_field :adress_cont, placeholder: "エリア", class: "header-serch-form"  %>
+          <%= f.submit class: "serch_btn" %>
           <% end %>
+          <%= search_form_for @q, url: key_serch_room_path do |f| %>
+          <%= f.search_field :adress_or_room_name_or_room_introduce_cont, placeholder: "キーワード", class: "header-serch-form"  %>
+          <%= f.submit class: "key_btn" %>
+          <% end %>"
         </div>
-      </div>
+
        <% if user_signed_in? %>
         <!-- ユーザーがログイン状態の時の処理 -->
         <div class = login-header-right-nav>
-          <p><%= current_user.username %></p>
+          <p class="user-name"><%= current_user.username %></p>
           <div class="login-nav-item">
             <nav>
               <%  if current_user.user_image.file.nil? %>

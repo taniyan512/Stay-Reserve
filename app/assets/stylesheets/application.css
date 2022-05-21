@@ -29,6 +29,21 @@
     float:right;
 }
 
+.header-logo {
+    font-family: 'Hina Mincho', serif;
+    color: white;
+    text-decoration: none;
+    font-size: 40px
+}
+
+.serch_form {
+    display:flex;
+    margin-top:20px;
+    margin-bottom: 25px;
+    padding-left: 20px;
+    width:100px
+}
+
 .nav-item {
     display:inline-block;
     color: #fff;
@@ -64,33 +79,35 @@
     float:right;
 }
 
-.login-icon {
-    float:right;
-    width:5%;
-    height:30%;
-    border-radius:50%;
+.user-name {
     position:relative;
-    bottom:125px;
+    right: 200px;
+    bottom: 70px;
+    z-index: 3;
+    font-family: 'Hina Mincho', serif;
 }
+
+
 
 .login_user_icon {
     float:right;
-    width:100px;
-    height:100px;
+    width:65px;
+    height:65px;
     border-radius:50%;
     position:relative;
-    bottom:50px;
+    bottom:130px;
 }
 
 .dropdown {
     display:none;
-    background-color: #fff;
+    background-color:#EEEEEE;
     border: 3px solid #f6F8f9;
     position: absolute;
     top: 70px;
     right: 10px;
     padding: 15px;
     z-index: 1000;
+    
 }
 
 .dropdown li {
@@ -98,6 +115,9 @@
     font-size: 16px;
     padding: 3px 5px;
     list-style: none;
+    text-decoration: none;
+    color:#000000;
+    font-family: 'Hina Mincho', serif;
 }
 
 
@@ -119,3 +139,16 @@ h5 {
 p {
     color:#fff;
 }
+
+.serch_btn {
+    display: none;
+}
+
+.key_btn {
+    display:none;
+}
+
+.header-serch-form {
+    padding-right: 20px;
+    font-size: 20px;
+} 

@@ -9,8 +9,12 @@ class ReservationsController < ApplicationController
     @room = Room.find(params[:room_id])
     @reservation = Reservation.new(params.permit(:startDay, :endDay, :room_id, :numberOfPeople, :totalPrice))
     @reservation.user_id = current_user.id
-    @days = (@reservation.endDay - @reservation.startDay).to_i
-    @reservation.totalPrice = @days * @reservation.numberOfPeople * @room.price
+    if @reservation.valid?
+      @days = (@reservation.endDay - @reservation.startDay).to_i
+      @reservation.totalPrice = @days * @reservation.numberOfPeople * @room.price
+    else
+      render "rooms/show"
+    end
   end
 
   def new
@@ -29,6 +33,8 @@ class ReservationsController < ApplicationController
   def show
     @user = current_user.id
     @reservation = Reservation.find(params[:id])
+    @q = Room.ransack(params[:q])
+    @results = @q.result 
   end
 
   

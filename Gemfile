@@ -69,3 +69,6 @@ gem 'pry-rails'
 
 #検索フォームを追加する
 gem 'ransack'
+
+#エラーメッセージを日本語にする
+gem 'rails-i18n'

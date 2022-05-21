@@ -1,5 +1,7 @@
 <div class ="room-new">
 <h3>ルーム情報登録</h3>
+
+<%= render "shared/partial", obj:@room %>
  
 <%= form_with model: @room do |f| %>
     <table>
@@ -10,12 +12,12 @@
  
         <tr>
             <th><%= f.label :room_introduce ,"ルーム紹介" %></th>
-            <td><%= f.text_field :room_introduce %></td>
+            <td><%= f.text_field :room_introduce, placeholder: "ルーム説明を入力" %></td>
         </tr>
  
         <tr>
             <th><%= f.label :price ,"料金" %></th>
-            <td><%= f.text_field :price %></td>
+            <td><%= f.number_field :price, placeholder: "1日あたりの料金" %></td>
         </tr>
  
         <tr>

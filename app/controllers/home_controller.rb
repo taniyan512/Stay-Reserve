@@ -1,14 +1,25 @@
 class HomeController < ApplicationController
 
   def top
+    @q = Room.ransack(params[:q])
+  end
+
+  def area_serch
+    @q = Room.ransack(params[:q])
+    @results = @q.result
   end
   
+  def key_serch
+    @q = Room.ransack(params[:q])
+    @results = @q.result 
+  end
+   
   def account
     @user = current_user
   end
 
   def profile
-    @user = current_user
+    @user = current_user 
   end
 
   def update

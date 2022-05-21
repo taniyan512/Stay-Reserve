@@ -2,6 +2,8 @@
 <p class="notice"><%= flash[:notice] %></p>
 <% end %>
 
+<%= render "shared/partial", obj:@reservation %>
+
 <div class="room-show-content">
     <%= image_tag @room.room_image.url, class: "show-image" %>
     <div class="resservations-form">
