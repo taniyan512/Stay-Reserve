@@ -15,10 +15,12 @@
  */
  .header {
     width:100%;
+    position: relative;
     height: 70px;
     padding: 4px 30px;
     background-color: #000000;
     box-sizing: border-box;
+    z-index: 3;
 }
 
 .header-left-nav {
@@ -27,6 +29,8 @@
 
 .header-right-nav {
     float:right;
+    position: relative;
+    bottom: 60px;
 }
 
 .header-logo {
@@ -48,6 +52,7 @@
     display:inline-block;
     color: #fff;
     font-size: 14px;
+    z-index: 3;
 }
 
 .btn {
@@ -89,7 +94,7 @@
 
 
 
-.login_user_icon {
+.login-user-icon {
     float:right;
     width:65px;
     height:65px;
@@ -152,3 +157,14 @@ p {
     padding-right: 20px;
     font-size: 20px;
 } 
+
+.notice {
+    z-index: 100;
+    margin-bottom: 50px;
+    color:white;
+    position:relative;
+    margin-top: 0;
+    margin-bottom: 0;
+    background-color:#CCFFFF;
+    text-align: center;
+}

@@ -3,12 +3,11 @@
 // You can use Sass (SCSS) here: https://sass-lang.com/
 
 //room/index
-.room-post-content {
-    width: 100%;
-}
 
-table {
+
+.room-post-content table {
     border-collapse: collapase;
+    text-align: center;
     width: 100%;
 }
 
@@ -16,12 +15,10 @@ h3 {
     font-size: 40px;;
 }
 
-.room-infomation {
-    width: 100%
-}
 
-.room-user-infomation {
-    width: 100%;
+tbody {
+    margin:50px;
+
 }
 
 .image {
@@ -31,10 +28,33 @@ h3 {
 
 //room/show
 .room-show-content {
-    width: 100%;
+    display:flex;
+    flex-flow:column;
+    justify-content:space-between;
+    align-items: center;
+    font-family: 'Hina Mincho', serif;
 }
 
 .show-image {
     width: 500px;
     height: 400px;
+}
+
+.room-show-name {
+    font-size: 40px;
+}
+
+//ルーム登録
+.room-new h3 {
+    text-align: center;
+}
+
+.room-new-form table {
+    text-align: center;
+    margin-left: 730px;
+}
+
+.room-btn-content {
+    list-style: none;
+    margin-left: 820px;
 }

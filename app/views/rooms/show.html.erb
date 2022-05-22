@@ -5,6 +5,9 @@
 <%= render "shared/partial", obj:@reservation %>
 
 <div class="room-show-content">
+    <div class="room-show-name">
+    <%= @room.room_name %>
+    </div>
     <%= image_tag @room.room_image.url, class: "show-image" %>
     <div class="resservations-form">
         <%= form_with url: confirm_reservation_path do |f| %>

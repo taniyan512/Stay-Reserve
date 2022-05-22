@@ -1,0 +1,30 @@
+.user-new {
+    text-align: center;
+}
+
+.user-new h2 {
+    padding-left: 210px;
+}
+
+.field {
+    padding: 4px;
+    height: 40px;
+}
+
+.field::after {
+    content: "必須";
+    color: #fff;
+    background-color: #ff0000a8;
+    font-size: 12px;
+    border-radius: 5px;
+    padding: 4px;
+    margin: 0 5px;
+}
+
+.login {
+    text-align: center;
+}
+
+.login h2 {
+    padding-left:190px;
+}

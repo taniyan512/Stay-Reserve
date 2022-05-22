@@ -26,7 +26,7 @@ class HomeController < ApplicationController
     @user = current_user
     if @user.update(params.permit(:user_image , :username, :self_introduce))
       flash[:notice] = "Profile was successfully updated."
-      redirect_to profile_home_path
+      redirect_to "/"
     else
       render 'profile'
     end
