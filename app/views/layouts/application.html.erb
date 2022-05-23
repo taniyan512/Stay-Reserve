@@ -7,10 +7,66 @@
     <%= csp_meta_tag %>
 
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_pack_tag 'application' %>
   </head>
 
   <body>
+    <header class="header">
+  
+        <div class="header-left-nav">
+          <a href="/" class="header-logo">
+            Taniyan Share
+          </a>
+        </div>
+        <div class="serch_form">
+          <%= search_form_for @q, url: area_serch_room_path do |f| %>
+          <%= f.search_field :adress_cont, placeholder: "エリア", class: "header-serch-form"  %>
+          <%= f.submit class: "serch_btn" %>
+          <% end %>
+          <%= search_form_for @q, url: key_serch_room_path do |f| %>
+          <%= f.search_field :adress_or_room_name_or_room_introduce_cont, placeholder: "キーワード", class: "header-serch-form"  %>
+          <%= f.submit class: "key_btn" %>
+          <% end %>"
+        </div>
+
+       <% if user_signed_in? %>
+        <!-- ユーザーがログイン状態の時の処理 -->
+        <div class = login-header-right-nav>
+          <p class="user-name"><%= current_user.username %></p>
+          <div class="login-nav-item">
+            <nav>
+              <%  if current_user.user_image.file.nil? %>
+                <img class="login-user-icon" src="/assets/default_icon-9263fc59c414b7228d256fc178dcb22183561357950a68f5ad086ba7ee054974.jpeg">
+              <% else %>
+                <%= image_tag current_user.user_image.url, class: "login-user-icon"  %>
+              <% end %>             
+                <ul class="dropdown">
+                  <li><%= link_to "プロフィール", profile_home_path %></li>
+                  <li><%= link_to "ルーム登録", new_room_path %></li>
+                  <li><%= link_to "予約一覧", reservations_path %> </li>
+                  <li><%= link_to "登録済みルーム一覧", rooms_path %> </li>
+                  <li><%= link_to "アカウント設定", account_home_path  %></li>
+                  <li><%= link_to "ログアウト",destroy_user_session_path,method: :delete %></li>
+                </ul>
+            </nav>
+          </div>
+        </div>
+      <% else  %> <!-- ユーザーがログインしていない時 -->
+        <div class="header-right-nav">
+          <div class="nav-item">
+            <a class="btn first-btn"  href="/users/sign_in">ログイン</a>
+            <a class="btn second-btn" href="/users/sign_up">登録する</a>
+          </div>
+        </div> 
+      <% end %>
+    </header>
+   
+    <p class="notice"><%= notice %></p>
+    <p class="alert"><%= alert %></p>
+
     <%= yield %>
+    <footer>
+      <h5>TANIYAN.WORLD</h5>
+    </footer>
   </body>
 </html>

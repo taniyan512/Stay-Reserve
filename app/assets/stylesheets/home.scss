@@ -1,0 +1,210 @@
+// Place all the styles related to the home controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+.home-image {
+    width: 100%;
+    position:relative;
+    bottom:129px;
+    height:890px;
+    z-index: 1;
+}
+
+.home-content {
+    height:1500px;
+}
+
+.home-comment {
+    font-family: 'Hina Mincho', serif;
+    position:absolute;
+    z-index: 3;
+    color: white;
+    margin: 0px;
+    padding-left: 50px;
+    top: 100px
+}
+
+h1{
+    margin: 0;
+}
+
+.home-serch {
+    background-color:white;
+    width:600px;
+    position:absolute;
+    bottom: 200px;
+    left:400px;
+    z-index: 3;
+    margin-left: 100px;
+    height:200px;
+    border-radius: 0.5rem;
+}
+
+.home-serch-comment {
+    color:black;
+    font-size: 25px;
+    font-family: 'Hina Mincho', serif;
+    padding-left: 50px;
+    
+}
+
+.home-serch-form {
+    text-align: center;
+    padding-top: 20px;
+}
+
+.home-btn {
+    margin-left: 20px;
+    background-color: #4a90e2;
+    color:white;
+    border-color: #007bff;
+    font-weight: 400;
+    height:50px;
+    width:100px;
+    border-radius: 0.5rem;
+}
+
+.area-content {
+    position: relative;
+    bottom: 100px;
+}
+
+.home-area-form {
+    height:50px;
+    width:200px;
+    font-size: 20px;
+}
+
+.area-content h3 {
+    margin:0;
+    font-family: 'Hina Mincho', serif;
+}
+
+.area-content-image {
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+    display:flex;
+    justify-content: space-around;
+    z-index: 1;
+}
+.area-image {
+    width: 300px;
+    height: 360px;
+    object-fit: cover;
+    border-radius: 5px;
+    margin-bottom: 25px;
+}
+
+.area-name {
+    z-index: 3;
+    color: black;
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+    bottom: 200px;
+}
+
+.area-name li {
+    padding: 0, 50px, 0 50px;
+    font-family: 'Hina Mincho', serif;
+    font-size: 30px;
+}
+
+//プロフィール画面
+.profile {
+    background-color: white;
+}
+
+.profile-form {
+    
+    max-width: 880px;
+    background-color: #fff;
+    border: 1px solid #eaedef;
+    margin: 30px auto;
+
+}
+
+.login-icon { 
+    width:65px;
+    height:65px;
+    border-radius:50%;
+}
+
+.profile-content {
+    text-align: center;
+}
+
+.profile-container {
+    text-align: center;
+}
+
+.profile-container  {
+    width:500px;
+    margin: auto;
+}
+
+.profile-btn-content {
+    list-style-type: none;
+}
+
+
+.profile-btn  {
+    background-color: #4a90e2;
+    color:white;
+    border-color: #007bff;
+    font-weight: 400;
+    height:50px;
+    width:100px;
+    border-radius: 0.5rem;
+}
+
+table {
+    padding: 30px,30px,0,30px;
+    margin: 0 15px;
+    font-size: 16px;
+}
+
+table td {
+    padding: 10px;
+}
+
+table th {
+    font-family: 'Hina Mincho', serif;
+}
+
+.username::after {
+    content: "必須";
+    color: #fff;
+    background-color: #ff0000a8;
+    font-size: 12px;
+    border-radius: 5px;
+    padding: 4px;
+    margin: 0 5px;
+}
+
+.profile-content {
+    font-size: 30px;
+    font-family: 'Hina Mincho', serif;
+}
+
+
+
+//アカウント設定
+.account-container h4 {
+    text-align: center;
+}
+
+.account-container table {
+    text-align: center;
+    margin-left: 200px;
+}
+
+.edit-btn {
+    text-align: center;
+    font-size: 50px;
+    color:blue;
+    width:500px;
+    border-radius: 0.3rem;
+}

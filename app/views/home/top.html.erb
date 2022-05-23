@@ -1,0 +1,41 @@
+<% if flash[:notcie] %>
+<p class="notice"><%= flash[:notice] %></p>
+<% end %>
+<div class="home-content">
+    <div class="home-comment">
+        <h1>旅をしよう、まだあなたが知らないこの素晴らしい国、日本を。</h1>
+    </div>
+    <img class="home-image" src="/assets/wp_11_16_pc_04.jpeg">
+    <div class="home-serch">
+        <p class="home-serch-comment">Taniyan Shareで日本をもっと好きになろう!!</p>
+        <div class="home-serch-form">
+            <%= search_form_for @q, url: area_serch_room_path do |f| %>
+                <%= f.search_field :adress_cont, placeholder: "エリア", class: "home-area-form"  %>
+                <%= f.submit "GO!!!", class: "home-btn" %>
+            <% end %>
+        </div>
+    </div>
+    <div class="area-content">
+        <h3>おすすめのエリア</h3>
+        <ul class="area-name">
+            <li>東京</li>
+            <li>大阪</li>
+            <li>京都</li>
+            <li>北海道</li>
+        </ul>
+        <div class="area-content-image">
+            <%= link_to controller: "home", action: "key_serch", target: "_blank", q: {adress_or_room_name_or_room_introduce_cont: '東京'} do %>
+                <img class="area-image" src="/assets/img_tokyo.jpeg">
+            <% end %>
+            <%= link_to controller: "home", action: "key_serch", target: "_blank", q: {adress_or_room_name_or_room_introduce_cont: '大阪'} do %>
+                <img class="area-image" src="/assets/img_osaka.jpeg">
+            <% end %>
+            <%= link_to controller: "home", action: "key_serch", target: "_blank", q: {adress_or_room_name_or_room_introduce_cont: '京都'} do %>
+                <img class="area-image" src="/assets/img_kyoto.jpeg">
+            <% end %>
+            <%= link_to controller: "home", action: "key_serch", target: "_blank", q: {adress_or_room_name_or_room_introduce_cont: '北海道'} do %>
+                <img class="area-image" src="/assets/img_sapporo.jpeg">
+            <% end %>
+        </div>
+    </div>
+</div>

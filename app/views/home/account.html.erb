@@ -1,0 +1,14 @@
+<div class="account-container">
+    <h4>アカウント</h4>
+    <table>
+        <tr>
+            <th>メールアドレス</th>
+            <td><%= @user.email %></td>
+        </tr>
+        <tr>
+            <th>パスワード</th>
+            <td><%= @user.encrypted_password %>
+        </tr>
+    </table>
+    <a class="edit-btn"  href="/users/edit">編集</a>
+</div>

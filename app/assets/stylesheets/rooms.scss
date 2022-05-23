@@ -1,0 +1,140 @@
+// Place all the styles related to the rooms controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+
+//room/index
+
+
+.room-post-content table {
+    border-collapse: collapase;
+    text-align: center;
+    width: 100%;
+}
+
+h3 {
+    font-size: 40px;;
+}
+
+
+tbody {
+    margin:50px;
+
+}
+
+.image {
+    width: 240px;
+    height: 140px;
+}
+
+//room/show
+.room-show-content {
+    display:flex;
+    flex-flow:column;
+    justify-content:space-between;
+    align-items: center;
+    font-family: 'Hina Mincho', serif;
+}
+
+.show-image {
+    width: 500px;
+    height: 400px;
+}
+
+.room-show-name {
+    font-size: 40px;
+}
+
+//ルーム登録
+.room-new h3 {
+    text-align: center;
+}
+
+.room-new-form table {
+    text-align: center;
+    margin-left: 730px;
+}
+
+.room-btn-content {
+    list-style: none;
+    margin-left: 820px;
+}
+
+.room_name::after {
+    content: "必須";
+    color: #fff;
+    background-color: #ff0000a8;
+    font-size: 12px;
+    border-radius: 5px;
+    padding: 4px;
+    margin: 0 5px;
+}
+
+.room_introduce::after {
+    content: "必須";
+    color: #fff;
+    background-color: #ff0000a8;
+    font-size: 12px;
+    border-radius: 5px;
+    padding: 4px;
+    margin: 0 5px;
+}
+
+.price::after {
+    content: "必須";
+    color: #fff;
+    background-color: #ff0000a8;
+    font-size: 12px;
+    border-radius: 5px;
+    padding: 4px;
+    margin: 0 5px;
+}
+
+.adress::after {
+    content: "必須";
+    color: #fff;
+    background-color: #ff0000a8;
+    font-size: 12px;
+    border-radius: 5px;
+    padding: 4px;
+    margin: 0 5px;
+}
+
+.room_image::after {
+    content: "必須";
+    color: #fff;
+    background-color: #ff0000a8;
+    font-size: 12px;
+    border-radius: 5px;
+    padding: 4px;
+    margin: 0 5px;
+}
+
+.startDay::after {
+    content: "必須";
+    color: #fff;
+    background-color: #ff0000a8;
+    font-size: 12px;
+    border-radius: 5px;
+    padding: 4px;
+    margin: 0 5px;
+}
+
+.endDay::after {
+    content: "必須";
+    color: #fff;
+    background-color: #ff0000a8;
+    font-size: 12px;
+    border-radius: 5px;
+    padding: 4px;
+    margin: 0 5px;
+}
+
+.numberOfPeople::after {
+    content: "必須";
+    color: #fff;
+    background-color: #ff0000a8;
+    font-size: 12px;
+    border-radius: 5px;
+    padding: 4px;
+    margin: 0 5px;
+}
