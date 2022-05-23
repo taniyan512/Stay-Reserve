@@ -14,3 +14,6 @@ ja:
         startDay: 開始日 
         endDay: 終了日 
         numberOfPeople: 人数
+      user:
+        username: ユーザーの名前 
+        self_introduce: 自己紹介

@@ -13,15 +13,15 @@
         <%= form_with url: confirm_reservation_path do |f| %>
         <table>
             <tr>
-                <th><%= f.label :startDay, "開始日" %></th>
+                <th><%= f.label :startDay, "開始日", class: "startDay" %></th>
                 <td><%= f.date_field :startDay %></td>
             </tr>
             <tr>
-                <th><%= f.label :endDay, "終了日" %></th>
+                <th><%= f.label :endDay, "終了日", class: "endDay" %></th>
                 <td><%= f.date_field :endDay %></td>
             </tr>
             <tr>
-                <th><%= f.label :numberOfPeople, "人数" %></th>
+                <th><%= f.label :numberOfPeople, "人数", class: "numberOfPeople" %></th>
                 <td><%= f.number_field :numberOfPeople %></td>
             </tr>
             <%= f.hidden_field :room_id, value: @room.id %>
