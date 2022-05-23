@@ -14,7 +14,7 @@ gem 'sass-rails', '>= 6'
 # Transpile app-like JavaScript. Read more: https://github.com/rails/webpacker
 gem 'webpacker', '~> 5.0'
 # Turbolinks makes navigating your web application faster. Read more: https://github.com/turbolinks/turbolinks
-#gem 'turbolinks', '~> 5'
+gem 'turbolinks', '~> 5'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 2.7'
 # Use Redis adapter to run Action Cable in production
@@ -54,21 +54,3 @@ end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
-
-#ログイン機能を実装する
-gem 'devise'
-#ログイン機能を日本語にする
-gem 'devise-i18n'
-gem 'devise-i18n-views'
-
-#ファイルのアップロード機能を簡単に追加することが出来るgem
-gem 'carrierwave', '~> 2.0'
-
-#バグを調べる
-gem 'pry-rails'
-
-#検索フォームを追加する
-gem 'ransack'
-
-#エラーメッセージを日本語にする
-gem 'rails-i18n'
