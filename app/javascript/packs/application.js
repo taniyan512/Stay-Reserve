@@ -9,7 +9,7 @@ import * as ActiveStorage from "@rails/activestorage"
 import "channels"
 //追記
 require('jquery')
-require('test.js')
+require('user_menu.js')
 
 Rails.start()
 Turbolinks.start()

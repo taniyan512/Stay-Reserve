@@ -10,5 +10,5 @@ class User < ApplicationRecord
   validates :encrypted_password, presence: true, on: :create
   mount_uploader :user_image, UserImageUploader
 
-  validates :username, :self_introduce, presence: true
+  validates :username, presence: true
 end
